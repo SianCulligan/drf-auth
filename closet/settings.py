@@ -23,7 +23,7 @@ SECRET_KEY = 'n_j*1#7q_uk16j(fy9kf!08a#%$vacp8^5w=f1sz_fe##@t-b0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0','172.26.0.2', 'localhost']
 
 
 # Application definition
@@ -47,7 +47,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhietNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'closet.urls'
@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'postgres',
+        'HOST': 'db',
         # 'HOST': '0.0.0.0',
         'PORT': 5432,
     }
